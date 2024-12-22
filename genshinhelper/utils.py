@@ -21,12 +21,14 @@ import requests
 
 from genshincheckinhelper.config import config
 
+log_level = logging.DEBUG
 # 设置默认日志级别
 if not hasattr(config, 'LOG_LEVEL') or config.LOG_LEVEL is None:
-    config.LOG_LEVEL = 'INFO'
+    # config.LOG_LEVEL = 'INFO'
+    log_level = logging.INFO
 
 logging.basicConfig(
-    level=config.LOG_LEVEL,
+    level=log_level,
     format='%(asctime)s %(levelname)s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
