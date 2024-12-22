@@ -1,0 +1,77 @@
+{
+  "LANGUAGE": "zh",
+  "RANDOM_SLEEP_SECS_RANGE": "0-30",
+  "CHECK_IN_TIME": "06:00",
+  "CHECK_RESIN_SECS": 900,
+  "RESIN_THRESHOLD": 150,
+  "RESIN_TIMER_DO_NOT_DISTURB": "23:00-07:00",
+  "COOKIE_MIHOYOBBS": "account_id=195561368; cookie_token=nXmxvt9VhM1lYp3uq11fr2AeKZL87ycFq0QaG5r7#account_id=191560279; cookie_token=ZasH3TUwdjoOgliPPqqSLv89DW0yfNGhUDz8rXGP#account_id=98049170; cookie_token=VZQp51gpILauQIZD2XzYeduuYtJrkM3KQRG4kVIC",
+  "COOKIE_RESIN_TIMER": "",
+  "COOKIE_WD": "account_id=98049170; cookie_token=VZQp51gpILauQIZD2XzYeduuYtJrkM3KQRG4kVIC",
+  "COOKIE_MIYOUBI": "account_id=195561368; stuid=195561368; stoken=cAKnod0hOomHx5N93XleruE2Q0xmFJiG8SyXW1Vg; login_ticket=yOZCb8CJE1uAM7IeHik6n6FQE0Vt5QA7IL4Okt7P#stuid=98049170;stoken=ZGXxjyAHik7GoVkZXUv9SFBZst4oE37IHEG9z4FZ;login_ticket=fn23VyOfqzOqgjfcBhYPVfNgSjeYEe8wuXG6Mj0U",
+  "CLOUD_GENSHIN": [
+    {
+      "x-rpc-combo_token": "ai=4;ci=1;oi=195561368;ct=a1bf7c5c3c78528b3ba0e8751fe6fd1539ae58dd;si=28d62b2d7a78fc565997d4d7f1def31f724f05834cd762f1629e3d8a90e009aa;bi=hk4e_cn",
+      "x-rpc-client_type": "1",
+      "x-rpc-app_version": "2.2.0",
+      "x-rpc-sys_version": "15.4.1",
+      "x-rpc-channel": "appstore",
+      "x-rpc-device_id": "2A080B02-747B-460B-AB32-00E32D34F975",
+      "x-rpc-device_name": "MyIphone",
+      "x-rpc-device_model": "iPhone11,6",
+      "x-rpc-app_id": "",
+      "Referer": "https://app.mihoyo.com",
+      "Host": "api-cloudgame.mihoyo.com",
+      "Connection": "Keep-Alive",
+      "Accept-Encoding": "gzip, deflate, br",
+      "User-Agent": "%E4%BA%91%C2%B7%E5%8E%9F%E7%A5%9E/220113.1615 CFNetwork/1331.0.7 Darwin/21.4.0"
+    },
+    {
+      "x-rpc-combo_token": "ai=4;ci=1;oi=191560279;ct=5ce9c8f35fe8ceb915aeba3bce031aaea2fae691;si=c10f97141780d349ebf5a5fa735c9d1a5f6d0d42cd9d497b3c89981fcee1c65d;bi=hk4e_cn",
+      "x-rpc-client_type": "1",
+      "x-rpc-app_version": "2.2.0",
+      "x-rpc-sys_version": "14.1",
+      "x-rpc-channel": "appstore",
+      "x-rpc-device_id": "E7485797-E9CC-40FD-99BF-AAB3E991AB0B",
+      "x-rpc-device_name": "Iphone",
+      "x-rpc-device_model": "iPhone9,1",
+      "x-rpc-app_id": "",
+      "Referer": "https://app.mihoyo.com",
+      "Host": "api-cloudgame.mihoyo.com",
+      "Connection": "Keep-Alive",
+      "Accept-Encoding": "gzip, deflate, br",
+      "User-Agent": "%E4%BA%91%C2%B7%E5%8E%9F%E7%A5%9E/220113.1615 CFNetwork/1197 Darwin/20.0.0"
+    },
+    {
+      "x-rpc-combo_token": "ai=4;ci=1;oi=280998588;ct=83188dd2e8219f7ce27708e6964f3cd39f063a50;si=c4525e96229c25a7e99dceef5368bfdc43b5b3cd637a777c0782c82b24ecf81d;bi=hk4e_cn",
+      "x-rpc-client_type": "1",
+      "x-rpc-app_version": "2.2.0",
+      "x-rpc-sys_version": "14.1",
+      "x-rpc-channel": "appstore",
+      "x-rpc-device_id": "E7485797-E9CC-40FD-99BF-AAB3E991AB0B",
+      "x-rpc-device_name": "MyIphone",
+      "x-rpc-device_model": "iPhone9,1",
+      "x-rpc-app_id": "",
+      "Referer": "https://app.mihoyo.com",
+      "Host": "api-cloudgame.mihoyo.com",
+      "Connection": "Keep-Alive",
+      "Accept-Encoding": "gzip, deflate, br",
+      "User-Agent": "%E4%BA%91%C2%B7%E5%8E%9F%E7%A5%9E/220113.1615 CFNetwork/1197 Darwin/20.0.0"
+    }
+  ],
+  "COOKIE_HOYOLAB": "",
+  "COOKIE_WEIBO": "Accept-Encoding=default&aid=01A3ErBjI51E8fQbOUUDrXEL3sj3WLrXSTE94dy7E9-j9-j-U.&app_id=7&c=weicoabroad&flag=0&from=1246693010&gdid=pKBzArBUhdLdniHk182b030a&gsid=_2A25PKfVCDeRxGeFJ71cY9C3MyD6IHXVqfw-KrDV6PUJbmdCOLWr_kWpNf8bhXTL29-x8D59fKkEcQQb4OblH-2qk&i=4b71c69&lang=zh_CN&s=cf86f451&ua=iPhone9%2C1_iOS14.1_Weibo_intl._4660_wifi&v_p=59#Accept-Encoding=default&aid=01A3ErBjI51E8fQbOUUDrXEL3sj3WLrXSTE94dy7E9-j9-j-U.&app_id=7&c=weicoabroad&flag=0&from=1246993010&gdid=pKBzArBUhdLdniHk182b030a&gsid=_2A25PMEfDDeRxGedJ61cS8inMyj6IHXVqZNwLrDV6PUJbkdCOLUTWkWpNVnvYdVqYElu0EMkBqnDyrmLaGoJ-nKW_&i=4b71c69&lang=zh_CN&s=e66cb6ef&ua=iPhone9%2C1_iOS14.1_Weibo_intl._4690_wifi&v_p=59",
+  "COOKIE_KA": "",
+  "SHOPTOKEN": "",
+  "ONEPUSH": {
+    "notifier": "wechatworkapp",
+    "params": {
+      "markdown": false,
+      "corpid": "ww7a899f2d41e15eeb",
+      "corpsecret": "2awiI9ovbZ5jEpa3YxT2VOkBvwl5M-cbipmNa8c6FkI",
+      "agentid": "1000002",
+      "touser": "ZhuYuWei|matilda",
+      "thumb_media_id": "2bWSX92VqL2KhfMHoEHjtnqJQHRPgsUtQ9U7UXPpyB8g2MuReYQxbfSfH5NAKoFXC"
+    }
+  }
+}

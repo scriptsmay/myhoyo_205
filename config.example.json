@@ -1,0 +1,18 @@
+{
+  "LANGUAGE": "zh",
+  "LOG_LEVEL": "INFO",
+  "RANDOM_SLEEP_SECS_RANGE": "0-3",
+  "COOKIE_MIHOYOBBS": "",
+  "COOKIE_MIYOUBI": "",
+  "COOKIE_SR": "",
+  "CLOUD_GENSHIN": [],
+  "COOKIE_HOYOLAB": "",
+  "COOKIE_WEIBO": "",
+  "ONEPUSH": {
+    "notifier": "telechan",
+    "params": {
+      "url": "https://vercel.virola.me/api/send",
+      "sendkey": ""
+    }
+  }
+}
