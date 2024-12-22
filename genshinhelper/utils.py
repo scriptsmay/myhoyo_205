@@ -21,7 +21,9 @@ import requests
 
 from genshincheckinhelper.config import config
 
-#level=logging.INFO
+# 设置默认日志级别
+if not hasattr(config, 'LOG_LEVEL') or config.LOG_LEVEL is None:
+    config.LOG_LEVEL = 'INFO'
 
 logging.basicConfig(
     level=config.LOG_LEVEL,
