@@ -87,7 +87,7 @@ def taskGenshin(cookie):
 def taskHOYOLAB(cookie):
     t = gh.HKStarRail(cookie)
     r = t.sign()
-    # log.info('result')
+    # log.info('HKStarRail result==========>')
     # log.info(r)
     return task_common(r, None, HOYOLAB_MESSAGE_TEMPLATE, "HKStarRail")
 
@@ -203,11 +203,11 @@ def task10(cookie):
     return task_common(r, None, MESSAGE_TEMPLATE, None)
 
 task_list = [{
-    'name': 'HoYoLAB Community',
+    'name': 'HoYoLAB StarRail',
     'cookies': get_cookies(config.COOKIE_HOYOLAB),
     'function': taskHOYOLAB
 },{
-    'name': 'HoYoLAB Community',
+    'name': 'HoYoLAB Genshin',
     'cookies': get_cookies(config.COOKIE_GENSHIN),
     'function': taskGenshin
 }, {

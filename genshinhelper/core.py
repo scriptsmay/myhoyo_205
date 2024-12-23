@@ -53,7 +53,7 @@ class Client(object):
             log.info(_('Preparing to get user game roles information ...'))
             url = self.roles_info_url.format(self.game_biz)
             response = request('get', url, headers=self.headers, cookies=self.cookie).json()
-            log.debug(response)
+            # log.debug(response)
             if response.get('retcode') != 0:
                 raise GenshinHelperException(response.get('message'))
 
@@ -102,6 +102,8 @@ class Client(object):
         sign_info = self.sign_info
         roles_info = self.roles_info
         current_reward = self.current_reward
+        # log.info('==========current_reward:')
+        # log.info(current_reward)
 
         for i in range(len(sign_info)):
             d1 = roles_info[i]
@@ -114,6 +116,7 @@ class Client(object):
 
     def sign(self):
         user_data = self.user_data
+        # log.info(_('>>>>>>>>Successful user_data!\n{}').format(user_data))
         log.info(_('Preparing to claim daily reward ...'))
         result = []
         for i in range(len(user_data)):
@@ -137,13 +140,9 @@ class Client(object):
                     headers=get_headers(with_ds=True),
                     json=payload, cookies=self.cookie).json()
                 
-                # log.debug('sign_info response....')
-                # log.debug(response)
                 user_data[i]['status'] = response.get('message', -1)
                 user_data[i]['sign_response'] = response
                 retcode = response.get('retcode', -1)
-                # 0:      success
-                # -5003:  already checked in
                 if retcode == 0:
                     user_data[i]['total_sign_day'] = total_sign_day + 1
                     user_data[i]['is_sign'] = True
