@@ -55,13 +55,15 @@ class Client(object):
             response = request('get', url, headers=self.headers, cookies=self.cookie).json()
             # log.debug(response)
             if response.get('retcode') != 0:
-                raise GenshinHelperException(response.get('message'))
-
-            raw_roles_info = nested_lookup(response, 'list', fetch_first=True)
-            self._roles_info = [
-                extract_subset_of_dict(i, self.required_keys)
-                for i in raw_roles_info
-            ]
+                log.error(_('Failed to get user game roles information:\n{response}').format(response=response))
+                # raise GenshinHelperException(response.get('message'))
+                self._roles_info = []
+            else:
+                raw_roles_info = nested_lookup(response, 'list', fetch_first=True)
+                self._roles_info = [
+                    extract_subset_of_dict(i, self.required_keys)
+                    for i in raw_roles_info
+                ]
         return self._roles_info
 
     @property
