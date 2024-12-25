@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # cron:0 9 * * *
 # new Env("myhoyo更新脚本")
+# commander: sh myhoyo_205/update.sh
 
 # 获取脚本所在目录
 SCRIPT_DIR=$(dirname "$0")
@@ -8,6 +9,8 @@ SCRIPT_DIR=$(dirname "$0")
 ABS_SCRIPT_DIR=$(cd "$SCRIPT_DIR" && pwd)
 echo "Script directory is: $ABS_SCRIPT_DIR"
 
-cd "$SCRIPT_DIR" && git pull
+git config --global --add safe.directory $ABS_SCRIPT_DIR
+
+cd "$ABS_SCRIPT_DIR" && git pull
 
 echo "Update script repository successfully!"
