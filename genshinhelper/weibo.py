@@ -9,7 +9,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from .utils import request, nested_lookup, cookie_to_dict
+from .utils import request, log, nested_lookup, cookie_to_dict, _
 
 
 class Weibo(object):
@@ -35,10 +35,10 @@ class Weibo(object):
         if not self._follow_data:
             url = self.follow_data_url
             self.params['containerid'] = '100803_-_followsuper'
-            # turn off certificate verification
-            response = request('get', url, params=self.params, headers=self.headers, cookies=self.cookie, verify=False).json()
-            card_group = nested_lookup(response, 'card_group', fetch_first=True)
-            follow_list = [i for i in card_group if i['card_type'] == '8']
+            self.params['count'] = '30'
+            
+            follow_list = self.get_card_type_11(1)
+
             for i in follow_list:
                 action = nested_lookup(i, 'action', fetch_first=True)
                 request_url = ''.join(
@@ -53,6 +53,16 @@ class Weibo(object):
 
             self._follow_data.sort(key=lambda k: (k['level']), reverse=True)
         return self._follow_data
+    
+    def get_card_type_11(self, since_id):
+        url = self.follow_data_url
+        self.params['since_id'] = since_id  # 添加 since_id 到请求参数中
+        response = request('get', url, params=self.params, headers=self.headers, cookies=self.cookie, verify=False).json()
+        if response is None:
+            return []
+        card_group = nested_lookup(response, 'card_group', fetch_first=True)
+        follow_list = [i for i in card_group if i['card_type'] == '8']
+        return follow_list
 
     def sign(self):
         result = []
