@@ -288,9 +288,11 @@ def run_task(name, cookies, func):
     return message_box
 
 
-def job1():
+def job1(now = False):
     log.info(banner)
-    random_sleep(config.RANDOM_SLEEP_SECS_RANGE)
+    if not now:
+        random_sleep(config.RANDOM_SLEEP_SECS_RANGE)
+    
     log.info('Starting...')
     finally_result_dict = {
         i['name']: run_task(i['name'], i['cookies'], i['function'])
@@ -314,13 +316,13 @@ def job1():
 
 
 
-def run_once():
+def run_once(now = False):
     for i in dict(os.environ):
         if 'UID_' in i:
             del os.environ[i]
 
     gh.set_lang(config.LANGUAGE)
-    job1()
+    job1(now)
 
 
 def main():
